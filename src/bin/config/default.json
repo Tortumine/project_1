@@ -1,0 +1,17 @@
+{
+  "dbConfig": {
+    "host": "localhost",
+    "port": 27017,
+    "dbName": "db_test"
+  },
+  "mailConfig": {
+    "to": "personal.email@mail.com",
+    "transport": {
+      "service": "mailService",
+      "auth": {
+        "user": "website.reserved@mail.com\n",
+        "pass": "password"
+      }
+    }
+  }
+}

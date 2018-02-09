@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= data.head.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112845748-1"></script>
+
+    <% data.head.styleSheets.forEach(function(sheet) { %>
+    <link rel='stylesheet' href="/stylesheets/<%= sheet %>"/>
+    <% }); %>
+
+    <% data.head.javaScripts.forEach(function(script) { %>
+    <script src="/javascripts/<%= script %>"></script>
+    <% }); %>
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar" data-offset="60">
+<% if(data.body.header.visible){ %>
+<%- include(data.body.header.file,{body:data.body}) %>
+<% } %>
+<section>
+    <% data.body.content.forEach(function(el, index) {
+    if(el.visible){ %>
+    <%- include(el.file,{data: el.data, id:el.id}); %>
+    <% }}); %>
+</section>
+<% if(data.body.footer.visible){ %>
+<%- include(data.body.footer.file,{data: data.body.footer.data, id:data.body.footer.id}); %>
+<% } %>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <% if (body.header.visible) { %>
+            <% if (body.header.data.homeBtn.type === 'txt') { %>
+            <a id="homeBtn" class="navbar-brand"
+               href="<%= body.header.data.homeBtn.href %>"><%= body.header.data.homeBtn.value %></a>
+            <% } else if (body.header.data.homeBtn.type === 'img') { %>
+            <a id="homeBtn" class="navbar-brand" href="<%= body.header.data.homeBtn.href %>"><img border="0"
+                                                                                                  alt="<%= body.header.data.tabTitle %>"
+                                                                                                  src="<%= body.header.data.homeBtn.value %>"></a>
+            <% } %>
+            <% } %>
+        </div>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="<%= body.header.data.returnBtn.href %>"><%= body.header.data.returnBtn.value %></a></li>
+        </ul>
+    </div>
+</nav>

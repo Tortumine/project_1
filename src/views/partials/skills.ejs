@@ -1,0 +1,26 @@
+<!-- Container (Services Section) -->
+<div id="skills" class="container-fluid text-center">
+    <h2><%= data.h2 %></h2>
+    <h4><%= data.h4 %></h4>
+    <br>
+    <div class="row">
+        <% for(var i = 0;i < data.list.length;i++){ %>
+        <div class="col-sm-4 slideanim">
+            <% if(data.list[i].icon.type === 'glyphicon') { %>
+            <span class="glyphicon logo-small <%= data.list[i].icon.value %>"></span>
+            <% } else if(data.list[i].icon.type === 'fa') { %>
+            <span class="fa logo-small <%= data.list[i].icon.value %>"></span>
+            <% } else { %>
+            <img border="0" alt="" class="skill-img" src="/img/<%= data.list[i].icon.value %>">
+            <% } %>
+            <h4><%= data.list[i].h4Text %></h4>
+            <p><%= data.list[i].pText %></p>
+        </div>
+        <% if((i + 1) % 3 === 0){ %>
+    </div>
+    <br><br>
+    <div class="row slideanim">
+        <% } %>
+        <% } %>
+    </div>
+</div>

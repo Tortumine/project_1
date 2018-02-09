@@ -1,0 +1,27 @@
+{
+  "name": "personal_website",
+  "version": "1.0.0",
+  "description": "Personal website project",
+  "author": "Aliaksei Mazurchyk <aliaksei.mazurchyk@hotmail.be>",
+  "scripts": {
+    "start": "cd bin && node ./www"
+  },
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "config": "^1.29.4",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "ejs": "2.5.6",
+    "express": "~4.15.5",
+    "fs": "0.0.1-security",
+    "glob": "^7.1.2",
+    "helmet": "^3.9.0",
+    "mongodb": "^3.0.2",
+    "monk": "^6.0.5",
+    "morgan": "~1.9.0",
+    "nodemailer": "^4.4.1",
+    "serve-favicon": "~2.4.5",
+    "validator": "^9.4.0"
+  },
+  "license": "MIT"
+}

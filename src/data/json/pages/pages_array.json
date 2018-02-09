@@ -1,0 +1,391 @@
+[
+  {
+    "lang": "en",
+    "route": "/",
+    "head": {
+      "title": "John Doe",
+      "styleSheets": [
+        "style.css"
+      ],
+      "javaScripts": [
+        "clientIndex.js"
+      ]
+    },
+    "body": {
+      "header": {
+        "file": "partials/headers/portfolioNavbar.ejs",
+        "visible": true,
+        "data": {
+          "homeBtn": {
+            "default": "hidden",
+            "type": "txt",
+            "value": "John Doe",
+            "href": "#top"
+          }
+        }
+      },
+      "content": [
+        {
+          "file": "partials/jumbotronTitle.ejs",
+          "visible": true,
+          "listedInNavbar": false,
+          "id": "home",
+          "navBarTitle": "",
+          "data": {
+            "h1": "John Doe",
+            "p": "Node.js portfolio",
+            "icon": {
+              "visible": "false",
+              "type": "",
+              "ref": ""
+            }
+          }
+        },
+        {
+          "file": "partials/about.ejs",
+          "visible": true,
+          "listedInNavbar": true,
+          "id": "about",
+          "navBarTitle": "About",
+          "data": {
+            "parts": [
+              {
+                "visible": true,
+                "txtPos": "full",
+                "h2": "About the project",
+                "h4": "",
+                "p": "",
+                "graphical": {
+                  "type": "img",
+                  "value": ""
+                }
+              }
+            ]
+          }
+        },
+        {
+          "file": "partials/skills.ejs",
+          "visible": true,
+          "listedInNavbar": true,
+          "id": "skills",
+          "navBarTitle": "Skills",
+          "data": {
+            "h2": "Skills",
+            "h4": "Just list them here (I recommend a multiple of 3)",
+            "list": [
+              {
+                "h4Text": "C# et ASP.NET",
+                "pText": "",
+                "icon": {
+                  "type": "img",
+                  "value": "csharp-logo.jpg"
+                }
+              },
+              {
+                "h4Text": "Node.js",
+                "pText": "",
+                "icon": {
+                  "type": "img",
+                  "value": "node-logo.jpg"
+                }
+              },
+              {
+                "h4Text": "jQuery",
+                "pText": "",
+                "icon": {
+                  "type": "img",
+                  "value": "jquery-logo.jpg"
+                }
+              },
+              {
+                "h4Text": "PHP",
+                "pText": "",
+                "icon": {
+                  "type": "img",
+                  "value": "php-logo.jpg"
+                }
+              },
+              {
+                "h4Text": "Joomla",
+                "pText": "",
+                "icon": {
+                  "type": "img",
+                  "value": "joomla-logo.jpg"
+                }
+              },
+              {
+                "h4Text": "Git",
+                "pText": "",
+                "icon": {
+                  "type": "img",
+                  "value": "git-logo.jpg"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "file": "partials/portfolio.ejs",
+          "visible": true,
+          "listedInNavbar": true,
+          "id": "portfolio",
+          "navBarTitle": "Portfolio",
+          "data": {
+            "projects": {
+              "visible": true,
+              "h2": "Portfolio",
+              "h4": "This is a nice place to put some works you're proud of",
+              "list": [
+                {
+                  "ps": "Paris",
+                  "p": "Lorem ipsum dolor",
+                  "href": "#",
+                  "icon": {
+                    "value": "paris.jpg"
+                  }
+                },
+                {
+                  "ps": "New York",
+                  "p": "sit amet, consectetur adipisicing elit",
+                  "href": "#",
+                  "icon": {
+                    "value": "newyork.jpg"
+                  }
+                },
+                {
+                  "ps": "San Francisco",
+                  "p": "sed do eiusmod tempor incididunt ut",
+                  "href": "#",
+                  "icon": {
+                    "value": "sanfran.jpg"
+                  }
+                }
+              ]
+            },
+            "testimonials": {
+              "visible": true,
+              "h2": "Testimonials",
+              "list": [
+                {
+                  "text": "Neque porro quisquam est.",
+                  "author": "Foo"
+                },
+                {
+                  "text": "At vero eos et accusamus.",
+                  "author": "Bar"
+                },
+                {
+                  "text": "Much wow !",
+                  "author": "Doge"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "file": "partials/contact.ejs",
+          "visible": true,
+          "listedInNavbar": true,
+          "id": "contact",
+          "navBarTitle": "Contact",
+          "data": {
+            "h2": "Contact",
+            "h4": "",
+            "location": {
+              "visible": true,
+              "value": "Liege, Belgium"
+            },
+            "phone": {
+              "visible": true,
+              "value": "+32 4 0000 0000"
+            },
+            "email": {
+              "visible": true,
+              "value": "your@hotmail.com"
+            },
+            "resume": {
+              "visible": true,
+              "value": "Curriculum Vitae",
+              "ref": "resume.pdf"
+            },
+            "linkedin": {
+              "visible": true,
+              "value": "https://www.linkedin.com/"
+            },
+            "github": {
+              "visible": true,
+              "value": "https://github.com/"
+            },
+            "bitbucket": {
+              "visible": true,
+              "value": "https://bitbucket.org/"
+            },
+            "twitter": {
+              "visible": true,
+              "value": "https://twitter.com/"
+            },
+            "facebook": {
+              "visible": true,
+              "value": "https://facebook.com/"
+            },
+            "form": {
+              "name": "Name",
+              "email": "Email",
+              "subject": "Subject",
+              "message": "Message",
+              "sentMessage": "Message sent"
+            }
+          }
+        }
+      ],
+      "footer": {
+        "file": "partials/footers/footer01.ejs",
+        "visible": true,
+        "listedInNavbar": false,
+        "id": "footer",
+        "navBarTitle": "",
+        "data": {
+          "glyphicon": "glyphicon-chevron-up",
+          "glyphiconTitle": "Up!",
+          "p": "About this site",
+          "pTitle": "Some explanations about partials",
+          "href": "/about"
+        }
+      }
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/about",
+    "head": {
+      "title": "About partials",
+      "styleSheets": [
+        "style.css"
+      ],
+      "javaScripts": [
+        "clientMain.js"
+      ]
+    },
+    "body": {
+      "header": {
+        "file": "partials/headers/onewayNavbar.ejs",
+        "visible": true,
+        "data": {
+          "homeBtn": {
+            "default": "",
+            "type": "txt",
+            "value": "About Partials",
+            "href": ""
+          },
+          "returnBtn": {
+            "value": "Return to the main page",
+            "href": "/"
+          }
+        }
+      },
+      "content": [
+        {
+          "file": "partials/about.ejs",
+          "visible": true,
+          "listedInNavbar": false,
+          "id": "aboutHeader",
+          "navBarTitle": "mhe",
+          "data": {
+            "parts": [
+              {
+                "visible": true,
+                "txtPos": "full",
+                "h2": "",
+                "h4": "A README file will be created as soon as possible to illustrate and explain all templates used in this project aswell as the JSON structure.",
+                "p": "",
+                "graphical": {
+                  "type": "",
+                  "value": ""
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "footer": {
+        "file": "partials/footers/footer01.ejs",
+        "visible": false,
+        "listedInNavbar": false,
+        "id": "footer",
+        "navBarTitle": "",
+        "data": {
+          "glyphicon": "glyphicon-chevron-up",
+          "glyphiconTitle": "Up!",
+          "p": "Return",
+          "pTitle": "Return",
+          "href": "/"
+        }
+      }
+    }
+  },
+  {
+    "lang": "en",
+    "route": "/404",
+    "head": {
+      "title": "404 :(",
+      "styleSheets": [
+        "style.css"
+      ],
+      "javaScripts": []
+    },
+    "body": {
+      "header": {
+        "file": "partials/headers/onewayNavbar.ejs",
+        "visible": true,
+        "data": {
+          "homeBtn": {
+            "default": "",
+            "type": "txt",
+            "value": "404",
+            "href": "/"
+          },
+          "returnBtn": {
+            "value": "Return to the main page",
+            "href": "/"
+          }
+        }
+      },
+      "content": [
+        {
+          "file": "partials/error.ejs",
+          "visible": true,
+          "listedInNavbar": false,
+          "id": "about",
+          "navBarTitle": "",
+          "data": {
+            "parts": [
+              {
+                "h2": "Are you lost?",
+                "h4": "404 : This page doesn't exist",
+                "p": "The page template is generic but each error message have to be specified. As I write this, only the 404 message is handled (hardcoded redirect). The glyphicon is customizable and can be hided.",
+                "graphical": {
+                  "type": "glyphicon",
+                  "value": "glyphicon-map-marker"
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "footer": {
+        "file": "partials/footers/footer01.ejs",
+        "visible": false,
+        "listedInNavbar": false,
+        "id": "footer",
+        "navBarTitle": "",
+        "data": {
+          "glyphicon": "glyphicon-chevron-up",
+          "glyphiconTitle": "Up!",
+          "p": "About this site",
+          "pTitle": "This is hiddent so nobody will see it",
+          "href": "/about"
+        }
+      }
+    }
+  }
+]

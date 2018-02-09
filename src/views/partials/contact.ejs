@@ -1,0 +1,77 @@
+<!-- Container (Contact Section) -->
+<div id="<%= id %>" class="container-fluid bg-grey ">
+    <h2 class="text-center"><%= data.h2 %></h2>
+    <% if(data.resume.visible === 'true'){ %>
+    <h4 class="text-center">
+
+    </h4>
+    <% } %>
+    <div class="row">
+        <div class="col-sm-5">
+            <p><%= data.subTitle %></p>
+            <% if(data.resume.visible){ %>
+            <p><a href="/doc/<%= data.resume.ref %>" class="btn btn-info" role="button" download><span
+                            class="glyphicon glyphicon-file"></span>&emsp; <%= data.resume.value %></a></p>
+            <% } %>
+
+            <% if(data.location.visible){ %>
+            <p><span class="glyphicon glyphicon-map-marker"></span>&emsp; <%= data.location.value %></p>
+            <% } %>
+            <% if(data.phone.visible){ %>
+            <p><span class="glyphicon glyphicon-phone"></span>&emsp; <%= data.phone.value %></p>
+            <% } %>
+            <% if(data.email.visible){ %>
+            <p><span class="glyphicon glyphicon-envelope"></span>&emsp; <%= data.email.value %></p>
+            <% } %>
+            <p>
+                <% if(data.github.visible){ %>
+                <a target="_blank" href="<%= data.github.value %>"><span class="fa fa-github"></span></a>
+                <% } %>
+                <% if(data.bitbucket.visible){ %>
+                <a target="_blank" href="<%= data.bitbucket.value %>"><span class="fa fa-bitbucket"></span></a>
+                <% } %>
+                <% if(data.linkedin.visible){ %>
+                <a target="_blank" href="<%= data.linkedin.value %>"><span class="fa fa-linkedin"></span></a>
+                <% } %>
+                <% if(data.twitter.visible){ %>
+                <a target="_blank" href="<%= data.twitter.value %>"><span class="fa fa-twitter"></span></a>
+                <% } %>
+                <% if(data.facebook.visible){ %>
+                <a target="_blank" class="a-basic" href="<%= data.facebook.value %>"><span
+                            class="fa fa-facebook"></span></a>
+                <% } %>
+            </p>
+        </div>
+        <div class="col-sm-7 slideanim">
+
+            <div id="sentMessage" class="text-center" hidden><h4><%= data.form.sentMessage %></h4></div>
+
+            <form id="form" method="post">
+                <div class="row">
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="<%= data.form.name %>"
+                               type="text" required>
+                    </div>
+                    <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="<%= data.form.email %>"
+                               type="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <input class="form-control" id="subject" name="subject" placeholder="<%= data.form.subject %>"
+                               type="text" required>
+                    </div>
+                </div>
+                <textarea class="form-control" id="message" name="message" placeholder="<%= data.form.message %>"
+                          rows="5" required></textarea><br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <button class="btn btn-default pull-right" type="submit">Send</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>

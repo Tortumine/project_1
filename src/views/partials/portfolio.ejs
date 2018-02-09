@@ -1,0 +1,58 @@
+<!-- Container (Portfolio Section) -->
+<div id="<%= id %>" class="container-fluid text-center bg-grey">
+    <% if(data.projects.visible === true){ %>
+    <h2><%= data.projects.h2 %></h2><br>
+    <h4><%= data.projects.h4 %></h4>
+    <div class="row text-center slideanim">
+        <% for(i = 0;i < data.projects.list.length;i++){ %>
+        <div class="col-sm-4">
+            <div class="thumbnail">
+                <a href="<%= data.projects.list[i].href %>"><img class="portfolio-img"
+                                                                 src="/img/<%= data.projects.list[i].icon.value %>"
+                                                                 alt="Mhe"></a>
+                <p><strong><%= data.projects.list[i].ps %></strong></p>
+                <p><%= data.projects.list[i].p %></p>
+            </div>
+        </div>
+        <% } %>
+    </div>
+    <br>
+    <% } %>
+    <% if(data.testimonials.visible === true){ %>
+    <h2><%= data.testimonials.h2 %></h2>
+    <div id="myCarousel" class="carousel slideUpIn text-center" data-ride="carousel">
+
+        <% if(data.testimonials.list.length > 0){ %>
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <% for(i = 1;i < data.testimonials.list.length;i++){ %>
+            <li data-target="#myCarousel" data-slide-to="<%= i %>"></li>
+            <% } %>
+        </ol>
+        <% } %>
+        <% if(data.testimonials.list.length > 0){ %>
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <h4>"<%= data.testimonials.list[0].text %>"<br><span><%= data.testimonials.list[0].author %></span></h4>
+            </div>
+            <% for(i = 1;i < data.testimonials.list.length;i++){ %>
+            <div class="item">
+                <h4>"<%= data.testimonials.list[i].text %>"<br><span><%= data.testimonials.list[i].author %></span></h4>
+            </div>
+            <% } %>
+        </div>
+        <% } %>
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <% } %>
+</div>
+
+

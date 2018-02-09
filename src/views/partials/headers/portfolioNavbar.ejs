@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <% if (body.header.visible) { %>
+            <% if (body.header.data.homeBtn.type === 'txt') { %>
+            <a id="homeBtn" class="navbar-brand <%= body.header.data.homeBtn.default %>"
+               href="#top"><%= body.header.data.homeBtn.value %></a>
+            <% } else if (body.header.data.homeBtn.type === 'img') { %>
+            <a id="homeBtn" class="navbar-brand <%= body.header.data.homeBtn.default %>" href="#top"><img border="0"
+                                                                                                          alt="<%= data.tabTitle %>"
+                                                                                                          src="<%= data.homeBtn.value %>"></a>
+            <% } %>
+            <% } %>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <% body.content.forEach(function(el, index) {
+                if(el.listedInNavbar && el.visible){ %>
+                <li><a href="#<%= el.id %>"><%= el.navBarTitle %></a></li>
+                <% }}); %>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+<div id="<%= id %>">
+    <% data.parts.forEach(function(elem, index) {
+    if(elem.visible){ %>
+    <% if(index % 2 === 0){ %>
+    <div class="container-fluid">
+        <% } else{ %>
+        <div class="container-fluid bg-grey">
+            <% } %>
+            <% if(elem.txtPos === 'full'){ %>
+            <div class="col-sm-12">
+                <h2><%= elem.h2 %></h2><br>
+                <h4><%- elem.h4 %></h4><br>
+                <p><%- elem.p %></p>
+            </div>
+            <% } else if(elem.txtPos === 'left'){ %>
+            <div class="col-sm-8">
+                <h2><%= elem.h2 %></h2><br>
+                <h4><%- elem.h4 %></h4><br>
+                <p><%- elem.p %></p>
+            </div>
+            <div class="col-sm-4 slideanim" style="text-align: center;">
+                <% if (elem.graphical.type === 'glyphicon') { %>
+                <span style="display: inline;" class="glyphicon logo <%= elem.graphical.value %>"></span>
+                <% } else if(elem.graphical.type === 'fa') { %>
+                <i style="display: inline;" class="fa logo <%= elem.graphical.value %>"></i>
+                <% } else if(elem.graphical.type === 'img') { %>
+                <img style="" border="0" class="img-responsive" src="/img/<%= elem.graphical.value %>">
+                <% } %>
+            </div>
+            <% } else if(elem.txtPos === 'right'){ %>
+            <div class="col-sm-4 slideanim" style="text-align: center;">
+                <% if (elem.graphical.type === 'glyphicon') { %>
+                <span style="display: inline; " class="glyphicon logo <%= elem.graphical.value %>"></span>
+                <% } else if(elem.graphical.type === 'fa') { %>
+                <i style="display: inline;" class="fa logo <%= elem.graphical.value %>"></i>
+                <% } else if(elem.graphical.type === 'img') { %>
+                <img style="" border="0" class="img-responsive" src="/img/<%= elem.graphical.value %>">
+                <% } %>
+            </div>
+            <div class="col-sm-8">
+                <h2><%= elem.h2 %></h2><br>
+                <h4><%- elem.h4 %></h4><br>
+                <p><%- elem.p %></p>
+            </div>
+            <% } %>
+        </div>
+        <% }}); %>
+    </div>

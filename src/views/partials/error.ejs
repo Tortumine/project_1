@@ -1,0 +1,33 @@
+<div id="<%= id %>">
+    <% data.parts.forEach(function(elem, index) {
+    %>
+    <% if(index % 2 === 0){ %>
+    <div class="container-fluid">
+        <% } else{ %>
+        <div class="container-fluid bg-grey">
+            <% } %>
+            <% if(elem.graphical.type === 'none'){ %>
+            <div class="col-sm-12">
+                <h2><%= elem.h2 %></h2><br>
+                <h4><%= elem.h4 %></h4><br>
+                <p><%= elem.p %></p>
+            </div>
+            <% } else { %>
+            <div class="col-sm-4 " style="text-align: center;">
+                <% if (elem.graphical.type === 'glyphicon') { %>
+                <span style="display: inline;" class="glyphicon logo <%= elem.graphical.value %>"></span>
+                <% } else if (elem.graphical.type === 'fa') { %>
+                <i style="display: inline;" class="fa <%= elem.graphical.value %> logo"></i>
+                <% } else if(elem.graphical.type === 'img') { %>
+                <img style="display: inline;" border="0" alt="" src="<%= elem.graphical.vaue %>">
+                <% } %>
+            </div>
+            <div class="col-sm-8">
+                <h2><%= elem.h2 %></h2><br>
+                <h4><%= elem.h4 %></h4><br>
+                <p><%= elem.p %></p>
+            </div>
+            <% } %>
+        </div>
+        <% }); %>
+    </div>
