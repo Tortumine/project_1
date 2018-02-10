@@ -6,7 +6,7 @@ Simple node.js portfolio app.
 
 - [x] Mail agent data load (uses *config* package)
 - [x] MongoDB integration
-- [ ] SSL certificate for NGINX
+- [x] SSL certificate for NGINX
 - [ ] Partials README
 - [ ] Create nice images for errors
 
@@ -24,11 +24,11 @@ From *src* dir:
 
 ## NGINX
 
-This app uses NGINX as reverse proxy with rate limiter. In a future version SSL certificate will be integrated to allow HTTPS connections. [Config file](doc/nginx_config)
+This app uses NGINX as reverse proxy with rate limiter. SSL certificate configured using letscencrypts/certbot . [Config file](doc/nginx_config)
 
 ## Node
 
-The server uses Express with ejs rendering. To make it simpler it also uses ejs-mate to divide template in sub-parts.
+Node app uses Express with ejs rendering. To make it simpler it also uses ejs-mate to divide template in sub-parts.
 
 ## Template
 
@@ -51,7 +51,7 @@ This app uses [config](https://www.npmjs.com/package/config) package to set the 
 Each page is structured like this.
 
 ``` none
-psge
+page
 |-- lang
 |-- route
 |-- head
